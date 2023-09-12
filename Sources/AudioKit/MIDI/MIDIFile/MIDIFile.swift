@@ -33,7 +33,7 @@ public struct MIDIFile {
     public var tracks: [MIDIFileTrack] {
         var tracks = trackChunks
         if format == 1 {
-            tracks = Array(tracks.dropFirst()) // drop tempo track
+//            tracks = Array(tracks.dropFirst()) // drop tempo track
         }
         return tracks.compactMap({ MIDIFileTrack(chunk: $0) })
     }
